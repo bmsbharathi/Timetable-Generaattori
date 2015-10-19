@@ -1,0 +1,145 @@
+CREATE TABLE staffd
+(
+name VARCHAR(30) NOT NULL,
+desig VARCHAR(30) NOT NULL,
+mail VARCHAR(40) NOT NULL,
+staffid VARCHAR(10) NOT NULL PRIMARY KEY,
+uname VARCHAR(15) NOT NULL UNIQUE,
+pass VARCHAR(15) NOT NULL,
+cpass VARCHAR(15) NOT NULL
+);
+CREATE TABLE assign
+(
+sem VARCHAR(30) NOT NULL,
+batch VARCHAR(30) NOT NULL,
+cid VARCHAR(40) NOT NULL,
+mode VARCHAR(10) NOT NULL PRIMARY KEY,
+sid VARCHAR(15) NOT NULL UNIQUE,
+design VARCHAR(15) NOT NULL,
+);
+CREATE TABLE courseup
+(
+staffid VARCHAR(15) NOT NULL PRIMARY KEY,
+sem VARCHAR(15) NOT NULL,
+cid VARCHAR(15) NOT NULL,
+course VARCHAR(15) NOT NULL
+);
+
+
+CREATE TABLE staffpref1
+(
+staffid VARCHAR(15) NOT NULL PRIMARY KEY,
+uname VARCHAR(15) NOT NULL,
+sess VARCHAR(15) NOT NULL,
+hour VARCHAR(15) NOT NULL,
+subj VARCHAR(15) NOT NULL
+);
+	
+
+
+INSERT INTO staffp VALUES();
+
+SELECT * from staffd WHERE uname = 'moha' AND pass = 'moha';
+
+
+INSERT INTO staffd VALUES("bms","Professor","bms@auist.net","IT10285","bmsbharathi","bharathi","bharathi");
+
+SELECT * from staffd;
+
+
+	 
+	  upd.setString(1,'fname');
+      upd.setString(2,'lname');
+      upd.setString(3,'sex');
+      upd.setString(4,'dob');
+      upd.setString(5,'mail');
+      upd.setString(6, 'contry');
+      upd.setString(8, 'uname');
+      upd.setString(9, 'pass');
+      upd.setString(7, 'cpass');
+      upd.executeUpdate();
+
+	  
+	   while(rs.next()){
+         //Retrieve by column name
+         int id  = rs.getInt("id");
+         int age = rs.getInt("age");
+         String first = rs.getString("first");
+         String last = rs.getString("last");
+}
+
+INSERT INTO timetable VALUES(2,'H','NULL','NULL','NULL','NULL','NULL','NULL','NULL','NULL','NULL','NULL','NULL','NULL','NULL','NULL','NULL','NULL','NULL','NULL','NULL','NULL','NULL','NULL','NULL','NULL','NULL','NULL','NULL','NULL','NULL','NULL','NULL','NULL','NULL','NULL','NULL','NULL','NULL','NULL','NULL','NULL');
+
+
+
+INSERT INTO scollision VALUES(2,'NULL','NULL','NULL','NULL','NULL','NULL','NULL','NULL','NULL','NULL','NULL','NULL','NULL','NULL','NULL','NULL','NULL','NULL','NULL','NULL','NULL','NULL','NULL','NULL','NULL','NULL','NULL','NULL','NULL','NULL','NULL','NULL','NULL','NULL','NULL','NULL','NULL','NULL','NULL','NULL','NULL');
+
+
+
+
+
+
+CREATE TABLE timetable
+(
+sem VARCHAR(15) NOT NULL,
+batch VARCHAR(15) NOT NULL,
+a1 VARCHAR(15) NOT NULL,
+a2 VARCHAR(15) NOT NULL,
+a3 VARCHAR(15) NOT NULL,
+a4 VARCHAR(15) NOT NULL,
+a5 VARCHAR(15) NOT NULL,
+a6 VARCHAR(15) NOT NULL,
+a7 VARCHAR(15) NOT NULL,
+a8 VARCHAR(15) NOT NULL,
+b1 VARCHAR(15) NOT NULL,
+b2 VARCHAR(15) NOT NULL,
+b3 VARCHAR(15) NOT NULL,
+b4 VARCHAR(15) NOT NULL,
+b5 VARCHAR(15) NOT NULL,
+b6 VARCHAR(15) NOT NULL,
+b7 VARCHAR(15) NOT NULL,
+b8 VARCHAR(15) NOT NULL,
+c1 VARCHAR(15) NOT NULL,
+c2 VARCHAR(15) NOT NULL,
+c3 VARCHAR(15) NOT NULL,
+c4 VARCHAR(15) NOT NULL,
+c5 VARCHAR(15) NOT NULL,
+c6 VARCHAR(15) NOT NULL,
+c7 VARCHAR(15) NOT NULL,
+c8 VARCHAR(15) NOT NULL,
+d1 VARCHAR(15) NOT NULL,
+d2 VARCHAR(15) NOT NULL,
+d3 VARCHAR(15) NOT NULL,
+d4 VARCHAR(15) NOT NULL,
+d5 VARCHAR(15) NOT NULL,
+d6 VARCHAR(15) NOT NULL,
+d7 VARCHAR(15) NOT NULL,
+d8 VARCHAR(15) NOT NULL,
+e1 VARCHAR(15) NOT NULL,
+e2 VARCHAR(15) NOT NULL,
+e3 VARCHAR(15) NOT NULL,
+e4 VARCHAR(15) NOT NULL,
+e5 VARCHAR(15) NOT NULL,
+e6 VARCHAR(15) NOT NULL,
+e7 VARCHAR(15) NOT NULL,
+e8 VARCHAR(15) NOT NULL
+);
+
+
+CREATE TABLE staff
+(
+staffid VARCHAR(15) NOT NULL PRIMARY KEY,
+uname VARCHAR(15) NOT NULL,
+desig VARCHAR(15) NOT NULL,
+sess VARCHAR(15) NOT NULL,
+hour VARCHAR(15) NOT NULL,
+subj VARCHAR(15) NOT NULL
+);
+
+UPDATE timetable SET a1='c003';
+UPDATE timetable SET a2='c003';
+	
+	INSERT INTO staff VALUES('IT10285','bharathi','PROFESSOR','FN','BLOCK','DBMS');
+	INSERT INTO staff VALUES('IT10286','Chinniah','PROFESSOR','AN','SINGLE','DBMS');
+	INSERT INTO staff VALUES('IT10287','Tharun','ASSISTANTPROFESSOR','FN','BLOCK','DBMS');
+	INSERT INTO staff VALUES('IT10288','Kishore','ASSOCIATEPROFESSOR','FN','BLOCK','DBMS');
