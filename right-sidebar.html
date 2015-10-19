@@ -1,0 +1,138 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Sign Up</title>
+	
+        <link rel="shortcut icon" href="../favicon.ico"> 
+        <link rel="stylesheet" type="text/css" href="css/demoo.css" />
+        <link rel="stylesheet" type="text/css" href="css/style1.css" />
+		<link rel="stylesheet" type="text/css" href="css/animate-custom.css" />
+		
+			<link rel="stylesheet" href="css/skel.css" />
+			<link rel="stylesheet" href="css/style.css" />
+    
+		</noscript><style>
+.uname
+{
+color:black;
+}
+body
+{
+	background-image: URL('/pic01.jpg');
+}
+a:link
+{
+text-decoration:none;
+font-weight:bold;
+font-family:comic sans ms;
+color:white;
+font-size:30px;
+}
+
+a:visited{
+font-family:comic sans ms;
+color:white;
+font-size:30px;
+text-decoration:none;
+}
+a:hover
+{
+text-decoration:none;
+font-weight:bold;
+color:lightgreen;
+font-size:30px;
+font-family:comic sans ms;
+}
+		.right
+		{
+		text-align:right;
+		font-size:30px;
+		color:white;
+		font-family:arial;
+		text-decoration:none;
+		}
+		.head
+	{
+	font-family:comic sans ms;
+	font-size:40px;
+	font-weight:900;
+	}
+		</style>
+	</head>
+	<body class="left-sidebar">
+
+		<!-- Header -->
+			<div id="header">
+			
+			<h1 class="head"><header>TimeTable Generaattori</header></h1>
+					<p class="right"><a href="index.html">Home</a></p>
+
+				<div class="container">
+						
+					<!-- Logo -->
+				<!--		<h1 style="font-size:50px;font-family:arial;">Signup</header>-->
+					
+
+				</div>
+				 <div class="container">
+            
+            <section>				
+                <div id="container_demo" >
+                    <a class="hiddenanchor" id="toregister"></a>
+                    <a class="hiddenanchor" id="tologin"></a>
+                    <div id="wrapper">
+                        <div id="login" class="animate form">
+                            <form  action="mysuperscript.php" autocomplete="on"> 
+                                <h1>Log in</h1> 
+<p> 
+                                    <label for="username" class="uname" data-icon="u" > Your email or username </label>
+                                    <input id="username" name="username" required="required" type="text" placeholder="myusername or mymail@mail.com"/>
+                                </p>
+                                <p> 
+                                    <label for="password" class="youpasswd" data-icon="p"> Your password </label>
+                                    <input id="password" name="password" required="required" type="password" placeholder="eg. X8df!90EO" /> 
+                                </p>
+                                <p class="login button"> 
+                                    <input type="submit" value="Login" /> 
+								</p>
+                            </form>
+                        </div>
+                            </form>
+                        </div>
+						
+                    </div>
+          </div>
+		<script src="js/classie.js"></script>
+		<script src="js/stepsForm.js"></script>
+		<script>
+			var theForm = document.getElementById( 'theForm' );
+			
+			new stepsForm( theForm, {
+				onSubmit : function( form ) {
+					// hide form
+					classie.addClass( theForm.querySelector( '.simform-inner' ), 'hide' );
+
+					/*
+					form.submit()
+					or
+					AJAX request (maybe show loading indicator while we don't have an answer..)
+					*/
+
+					// let's just simulate something...
+					var messageEl = theForm.querySelector( '.final-message' );
+					messageEl.innerHTML = 'Thank you! You are successfully registered.<br/><br/>You Will be redirected to the Homepage <br/><br/>now';
+						setTimeout(function(){
+						window.location = "/SRP/version1/index.html";
+											 },2500);
+					classie.addClass( messageEl, 'show' );
+			
+				}
+			}
+			);
+		 
+		</script>
+			</div>
+
+
+	</body>
+</html>

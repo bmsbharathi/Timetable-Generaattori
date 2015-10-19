@@ -1,0 +1,143 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Sign Up</title>
+	
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<script src="js/modernizr.custom.js"></script>
+		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.dropotron.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-layers.min.js"></script>
+		<script src="js/init.js"></script>
+		
+		<noscript>
+			<link rel="stylesheet" href="css/skel.css" />
+			<link rel="stylesheet" href="css/style.css" />
+		</noscript>
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+		<style>
+		a:link
+{
+text-decoration:none;
+font-weight:bold;
+font-family:comic sans ms;
+color:white;
+font-size:30px;
+}
+
+a:visited{
+font-family:comic sans ms;
+color:white;
+font-size:30px;
+text-decoration:none;
+}
+a:hover
+{
+text-decoration:none;
+font-weight:bold;
+color:lightgreen;
+font-size:30px;
+font-family:comic sans ms;
+}
+		.right
+		{
+		text-align:right;
+		font-size:30px;
+		color:white;
+		font-family:arial;
+		text-decoration:none;
+		}
+		</style>
+	</head>
+	<body class="left-sidebar">
+
+		<!-- Header -->
+			<div id="header">
+					<p class="right"><a href="index.html">Home</a></p>
+
+				<div class="container">
+						
+					<!-- Logo -->
+						<h1 style="font-size:50px;font-family:arial;">Signup</header>
+					
+
+				</div>
+				<div class="container">
+			<section>
+				<form id="theForm" class="simform" autocomplete="off" >
+					<div class="simform-inner">
+						<ol class="questions">
+							<li>
+								<span><label for="q1">What's your Name</label></span>
+								<input id="q1" name="q1" type="text"/>
+							</li>
+							<li>
+								<span><label for="q2">Which department are you?</label></span>
+								<input id="q2" name="q2" type="text"/>
+							</li>
+							<li>
+								<span><label for="q3">What is your designation of work?</label></span>
+							<input id="q3" name="q3" type="radio" value="Professor">Professor<br>
+							<input id="q3" name="q3" type="radio" value="ass prof">Associate professor<br>
+							<input id="q3" name="q3" type="radio" value="assnt prof">Assistant Professor<br>
+							<input id="q3" name="q3" type="radio" value="tf">Teaching Fellow<br>
+							</li>
+							<li>
+								<span><label for="q4">Preferred Sessions(Forenoon/Afternoon)?</label></span>
+								<input id="q4" name="q4" type="text" >
+							
+							</li>
+							
+							<li>
+								<span><label for="q5">Enter your password</label></span>
+								<input id="q5" name="q5" type="password"/>
+							</li>
+							<li>
+								<span><label for="q6">Confirm your password</label></span>
+								<input id="q6" name="q6" type="password"/>
+							</li>
+						</ol><!-- /questions -->
+						<button class="submit" type="submit">Submit</button>
+						<div class="controls">
+							<button class="next"></button>
+							<div class="progress"></div>
+							<span class="number">
+								<span class="number-current"></span>
+								<span class="number-total"></span>
+							</span>
+							<span class="error-message"></span>
+						</div><!-- / controls -->
+					</div><!-- /simform-inner -->
+					<span class="final-message"></span>
+				</form><!-- /simform -->			
+			</section>
+		</div><!-- /container -->
+		<script src="js/classie.js"></script>
+		<script src="js/stepsForm.js"></script>
+		<script>
+			var theForm = document.getElementById( 'theForm' );
+			
+			new stepsForm( theForm, {
+				onSubmit : function( form ) {
+					classie.addClass( theForm.querySelector( '.simform-inner' ), 'hide' );
+					var messageEl = theForm.querySelector( '.final-message' );
+					messageEl.innerHTML = 'Thank you! You are successfully registered.<br/><br/>You Will be redirected to the Homepage <br/><br/>now';
+						setTimeout(function(){
+						window.location = "http://localhost:8081/version1/index.html";
+											 },2500);
+					classie.addClass( messageEl, 'show' );
+			
+				}
+			}
+			);
+		 
+		</script>
+			</div>
+
+
+	</body>
+</html>
